@@ -27,7 +27,7 @@ public class UserUtils {
         user.setFirstName("firstName");
         user.setLastName("lastName");
         user.setPhoneNumber("123456789123");
-        user.setCountry("GB");
+        user.setCountry("NZ");
         user.setEnabled(true);
         user.setDescription("A basic user");
         user.setProfileImageUrl("https://blabla.images.com/basicuser");
