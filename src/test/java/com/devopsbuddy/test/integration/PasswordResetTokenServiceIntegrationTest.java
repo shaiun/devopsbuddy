@@ -4,7 +4,6 @@ import com.devopsbuddy.DevopsbuddyApplication;
 import com.devopsbuddy.backend.persistence.domain.backend.PasswordResetToken;
 import com.devopsbuddy.backend.persistence.domain.backend.User;
 import com.devopsbuddy.backend.service.PasswordResetTokenService;
-import com.devopsbuddy.backend.service.UserService;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -35,6 +34,20 @@ public class PasswordResetTokenServiceIntegrationTest extends AbstractServiceInt
                 passwordResetTokenService.createPasswordResetTokenForEmail(user.getEmail());
         Assert.assertNotNull(passwordResetToken);
         Assert.assertNotNull(passwordResetToken.getToken());
+
+    }
+
+    @Test
+    public void testFindByToken() throws Exception {
+        User user = createUser(testName);
+
+        PasswordResetToken passwordResetToken =
+                passwordResetTokenService.createPasswordResetTokenForEmail(user.getEmail());
+        Assert.assertNotNull(passwordResetToken);
+        Assert.assertNotNull(passwordResetToken.getToken());
+
+        PasswordResetToken token = passwordResetTokenService.findByToken(passwordResetToken.getToken());
+        Assert.assertNotNull(token);
 
     }
 
