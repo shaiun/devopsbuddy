@@ -1,3 +1,4 @@
+
 body {
     padding-top: 120px;
 
@@ -64,4 +65,12 @@ body {
     font-weight: 300;
     line-height: 1;
     letter-spacing: -1px;
+}
+
+/*-------------------------------------------------------
+ *  Signup form
+ *-------------------------------------------------------/
+ /** Registration page */
+.fieldError {
+    border : 2px solid red;
 }
