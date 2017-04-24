@@ -96,9 +96,13 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="file" th:text="#{signup.form.profile.image.url}"></label>
+                        <input type="file" id="file" name="file" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
                         <label for="country" th:text="#{signup.form.country}"></label>
                         <select class="form-control" id="country" name="country" th:field="*{country}">
-                            <option value="AU">Australia</option>
                             <option value="BG">Bulgaria</option>
                             <option value="BR">Brazil</option>
                             <option value="CN">China</option>
@@ -109,7 +113,6 @@
                             <option value="IN">India</option>
                             <option value="MA">Morocco</option>
                             <option value="NL">Netherlands</option>
-                            <option value="NZ">New Zealand</option>
                             <option value="PK">Pakistan</option>
                             <option value="RO">Romania</option>
                             <option value="RU">Russia</option>
